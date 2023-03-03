@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block header %}
+<h1>Countries in World</h1>
+<p>Check Your Country</p> 
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <table class="table table-bordered" id="example">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>COUNTRY</th>
+        </tr>
+      </thead>
+      <tbody>
+            {% for country in countries %}
+        <tr>
+            <td>{{ country.id }}</td>
+            <td>{{ country.country }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

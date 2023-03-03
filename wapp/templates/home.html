@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block header %}
+<h1>WORLD - SOCIO-ECONOMIC DATA</h1>
+<p>Socio Economic Data for European Countries!</p> 
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <table class="table table-bordered" id="example">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>COUNTRY</th>
+            <th>TOTAL POPULATION</th>
+            <th>URBAN POPULATION</th>
+            <th>GDP PER CAPITA</th>
+            <th>TOTAL LAND AREA</th>
+            <th>WATER PER CAPITA</th>
+            <th>AGRIC LABOR FORCE</th>
+            <th>TOTAL LABOR FORCE</th>
+            <th>TOTAL COMMERCIAL ENERGY</th>
+        </tr>
+      </thead>
+      <tbody>
+            {% for percapita in percapitas %}
+        <tr>
+            <td>{{ percapita.country_id }}</td>
+            <td>{{ percapita.country }}</td>
+            <td>{{ percapita.total_population }}</td>
+            <td>{{ percapita.urban_population }}</td>
+            <td>{{ percapita.gdp_per_capita }}</td>
+            <td>{{ percapita.total_land_area }}</td>
+            <td>{{ percapita.water_per_capita }}</td>
+            <td>{{ percapita.agric_labour_force }}</td>
+            <td>{{ percapita.total_labour_force }}</td>
+            <td>{{ percapita.total_comm_energy }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

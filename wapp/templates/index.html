@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block header %}
+<h1>Home Dashboard</h1>
+<p>Here is your Home Page!</p> 
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-4">
+      <h2>About The World Economy</h2>
+      <!-- <h5>Photo of me:</h5> -->
+      <div class="fakeimg"></div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3 class="mt-4">Some Important Statistics</h3>
+      <p>Useful Economic Indicators</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">POPULATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GDP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LAND AREA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">More</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>TRENDING ECONOMIC STATISTICS</h2>
+      <h5>Key topical Issue, Dec 7, 2020</h5>
+      <div class="fakeimg"></div>
+      <p>credit: World Economic Forum.</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+{% endblock %}
